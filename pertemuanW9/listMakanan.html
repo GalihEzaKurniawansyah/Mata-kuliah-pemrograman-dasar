@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Menu - Rasa Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset & Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #fcf8f2; /* Warna krem hangat biar vibes kuliner */
+    color: #2c2c2c;
+    padding-bottom: 40px;
+}
+
+/* Header */
+.menu-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    text-align: center;
+    color: #ffffff;
+    padding: 80px 20px;
+}
+
+.menu-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #ffbe33; /* Warna aksen kuning oranye */
+}
+
+.menu-header p {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Container Utama */
+.menu-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+}
+
+/* Judul Kategori */
+.category-title {
+    font-size: 24px;
+    color: #721c24; /* Merah maroon hangat */
+    border-bottom: 2px dashed #721c24;
+    padding-bottom: 8px;
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+}
+
+/* Grid Layout */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Kartu Menu */
+.menu-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar Menu */
+.menu-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Informasi Menu di dalam kartu */
+.menu-info {
+    padding: 20px;
+}
+
+.menu-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.menu-meta h3 {
+    font-size: 18px;
+    color: #1a1a1a;
+    font-weight: 600;
+    max-width: 70%;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e67e22; /* Warna oranye harga */
+    white-space: nowrap;
+}
+
+.description {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+/* Footer */
+.menu-footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #888888;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* Responsif Layar Kecil (HP) */
+@media (max-width: 480px) {
+    .menu-header h1 {
+        font-size: 28px;
+    }
+    .menu-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .menu-meta h3 {
+        max-width: 100%;
+    }
+}
+        </style>
+</head>
+<body>
+
+    <header class="menu-header">
+        <h1>Daftar Menu Spesial</h1>
+        <p>Nikmati kelezatan hidangan autentik dengan bahan pilihan terbaik</p>
+    </header>
+
+    <main class="menu-container">
+        
+        <h2 class="category-title">Makanan Utama</h2>
+        <div class="menu-grid">
+            
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=400&q=80" alt="Nasi Goreng Spesial" class="menu-img">
+                <div class="menu-info">
+                    <div class="menu-meta">
+                        <h3>Nasi Goreng Spesial</h3>
+                        <span class="price">Rp 28.000</span>
+                    </div>
+                    <p class="description">Nasi goreng bumbu warisan dengan topping telur mata sapi, ayam suwir, bakso, dan kerupuk udang.</p>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80" alt="Iga Bakar Madu" class="menu-img">
+                <div class="menu-info">
+                    <div class="menu-meta">
+                        <h3>Iga Bakar Madu</h3>
+                        <span class="price">Rp 55.000</span>
+                    </div>
+                    <p class="description">Iga sapi empuk yang dibakar dengan olesan madu murni, disajikan bersama sambal korek pedas manis.</p>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1626804475315-9644b37a2fe4?auto=format&fit=crop&w=400&q=80" alt="Ayam Betutu" class="menu-img">
+                <div class="menu-info">
+                    <div class="menu-meta">
+                        <h3>Ayam Betutu</h3>
+                        <span class="price">Rp 42.000</span>
+                    </div>
+                    <p class="description">Ayam kaya rempah khas Bali yang dimasak perlahan hingga bumbunya meresap sampai ke tulang.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="category-title">Minuman & Penutup</h2>
+        <div class="menu-grid">
+            
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=400&q=80" alt="Es Kopi Susu Aren" class="menu-img">
+                <div class="menu-info">
+                    <div class="menu-meta">
+                        <h3>Es Kopi Susu Aren</h3>
+                        <span class="price">Rp 18.000</span>
+                    </div>
+                    <p class="description">Perpaduan espresso ganda, susu segar lembut, dan sirup gula aren organik asli.</p>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="

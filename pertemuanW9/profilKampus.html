@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kampus - Universitas Nusantara</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* Header & Navigasi */
+header {
+    background-color: #0d2c54;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c9a66b;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(13, 44, 84, 0.8), rgba(13, 44, 84, 0.8)), 
+                url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #c9a66b;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #a88448;
+}
+
+/* Tentang Kampus */
+.about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0d2c54;
+    font-size: 32px;
+}
+
+.about-grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-text h3 {
+    color: #0d2c54;
+    margin: 15px 0 5px 0;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Fakultas Section */
+.faculties {
+    background-color: #f0f4f8;
+}
+
+.faculties h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0d2c54;
+    font-size: 32px;
+}
+
+.card-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border-top: 5px solid #0d2c54;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #0d2c54;
+}
+
+/* Footer */
+footer {
+    background-color: #0d2c54;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Responsif untuk Smartphone */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .container {
+        padding: 40px 0;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">UniNusantara</div>
+            <nav>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#fakultas">Fakultas</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1>Membangun Masa Depan Bersama Universitas Nusantara</h1>
+            <p>Unggul, Inovatif, dan Berkarakter Global.</p>
+            <a href="#tentang" class="btn">Jelajahi Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <section id="tentang" class="about container">
+        <h2>Tentang Kami</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Universitas Nusantara adalah institusi pendidikan tinggi terkemuka yang berkomitmen untuk menyediakan pendidikan berkualitas global. Berdiri sejak tahun 1990, kami terus berinovasi dalam riset dan teknologi untuk mencetak lulusan yang siap bersaing di kancah internasional.</p>
+                <h3>Visi</h3>
+                <p>Menjadi universitas riset unggulan yang berdampak positif bagi masyarakat dunia pada tahun 2035.</p>
+                <h3>Misi</h3>
+                <p>Menyelenggarakan pendidikan modern, memajukan penelitian interdisipliner, dan aktif dalam pengabdian masyarakat.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="Gedung Kampus">
+            </div>
+        </div>
+    </section>
+
+    <section id="fakultas" class="faculties">
+        <div class="container">
+            <h2>Fakultas & Program Studi</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Teknik & Ilmu Komputer</h3>
+                    <p>Mencakup Teknik Informatika, Sistem Informasi, dan Teknik Elektro dengan fokus pada AI dan IoT.</p>
+                </div>
+                <div class="card">
+                    <h3>Ekonomi & Bisnis</h3>
+                    <p>Mencakup Manajemen, Akuntansi, dan Bisnis Digital yang dirancang untuk melahirkan wirausahawan masa depan.</p>
+                </div>
+                <div class="card">
+                    <h3>Komunikasi & Desain</h3>
+                    <p>Mencakup Ilmu Komunikasi dan Desain Komunikasi Visual (DKV) untuk industri kreatif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak">
+        <div class="container footer-content">
+            <p>&copy; 2026 Universitas Nusantara. Hak Cipta Dilindungi.</p>
+            <p>Jl. Pendidikan No. 45, Jakarta, Indonesia | info@uninusantara.ac.id</p>
+        </div>
+    </footer>
+
+</body>
+</html>
