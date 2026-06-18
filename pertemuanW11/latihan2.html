@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2 - Tampilkan Biodata</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .btn-biodata {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-biodata:hover {
+            background-color: #0056b3;
+        }
+
+        .biodata-box {
+            display: none;
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #007bff;
+            border-radius: 4px;
+            text-align: left;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .biodata-box p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Latihan 2</h2>
+        <p>Klik tombol di bawah untuk melihat biodata saya.</p>
+        
+        <button class="btn-biodata" onclick="tampilkanBiodata()">Tampilkan Biodata</button>
+
+        <div id="biodata" class="biodata-box">
+            <p><strong>Nama:</strong> John Doe</p>
+            <p><strong>Kelas:</strong> XII RPL 1</p>
+            <p><strong>Keahlian:</strong> Web Developer</p>
+            <p><strong>Status:</strong> Sedang Belajar</p>
+        </div>
+    </div>
+
+    <script>
+        function tampilkanBiodata() {
+            var box = document.getElementById("biodata");
+            
+            if (box.style.display === "none" || box.style.display === "") {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

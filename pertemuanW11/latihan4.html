@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 4 - Validasi Form Nama</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 24px;
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4a90e2;
+            outline: none;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            min-height: 20px; /* Menjaga layout agar tidak melompat */
+        }
+
+        button {
+            width: 100%;
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Latihan 4</h2>
+        <p style="color: #666; margin-bottom: 20px;">Buat validasi form nama.</p>
+        
+        <form id="nameForm">
+            <div class="form-group">
+                <label for="inputNama">Nama Lengkap:</label>
+                <input type="text" id="inputNama" placeholder="Masukkan nama Anda...">
+                <div id="errorNama" class="error-message"></div>
+            </div>
+            
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            const inputNama = document.getElementById('inputNama');
+            const errorNama = document.getElementById('errorNama');
+            
+            const nilaiNama = inputNama.value.trim();
+            
+            if (nilaiNama === "") {
+                errorNama.innerText = "⚠️ Nama tidak boleh kosong!";
+                inputNama.style.borderColor = "#e74c3c";
+            } else if (nilaiNama.length < 3) {
+                errorNama.innerText = "⚠️ Nama harus minimal 3 karakter!";
+                inputNama.style.borderColor = "#e74c3c";
+            } else {
+                errorNama.innerText = "";
+                inputNama.style.borderColor = "#2ecc71";
+                
+                alert("Form berhasil dikirim! Halo, " + nilaiNama + ".");
+            }
+        });
+    </script>
+
+</body>
+</html>
