@@ -1,0 +1,11 @@
+{
+  "name": "server-informasi-kampus",
+  "version": "1.0.0",
+  "description": "Server informasi kampus sederhana menggunakan Node.js core module http",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Nama Anda",
+  "license": "ISC"
+}
